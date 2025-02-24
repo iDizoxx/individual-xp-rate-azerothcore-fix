@@ -63,7 +63,7 @@ class IndividualXP : public PlayerScript
 public:
     IndividualXP() : PlayerScript("IndividualXP") {}
 
-    void OnLogin(Player* player) override
+    void OnPlayerLogin(Player* player) override
     {
         QueryResult result = CharacterDatabase.Query("SELECT `XPRate` FROM `individualxp` WHERE `CharacterGUID`='{}'", player->GetGUID().GetCounter());
 
